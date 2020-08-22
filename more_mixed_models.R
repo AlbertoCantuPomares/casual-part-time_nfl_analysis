@@ -32,7 +32,7 @@ pbp_mut<-pbp %>%
     !is.na(cpoe)
   ) %>% select(id,wind,temp,poscoach,defcoach,team,oppteam,away,stadium_id,cpoe,away,passer_player_name,epa,season,cpoe)
 
-#If you want to look at EPA instead of CPOE, just change repsonse variable, also maybe take stadium_id out
+#If you want to look at EPA instead of CPOE, just change response variable, also maybe take stadium_id out
 mixed_model<-pbp_mut %>% 
   lmer(formula=
          cpoe ~
